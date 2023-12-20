@@ -12,18 +12,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - run: npm install
-        working-directory: ./sample-packages/npm
-      
-  publish-gpr:
-    needs: build
+  publish:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -33,10 +22,16 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          registry-url: https://npm.pkg.github.com/
       - run: npm install
         working-directory: ./sample-packages/npm
-      - run: npm publish
+      - run: npm run build
         working-directory: ./sample-packages/npm
+      - run: |
+          echo @lexacode:https://npm.pkg.github.com/ > build/.npmrc
+          echo '//npm.pkg.github.com/:_authToken=${NPM_TOKEN}' >> build/.npmrc
+        working-directory: ./sample-packages/npm
+      - run: npm publish
+        working-directory: ./sample-packages/npm/build
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
