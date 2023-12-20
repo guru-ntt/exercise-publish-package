@@ -2,4 +2,8 @@
   "name": "my-awesome-package",
   "version": "1.0.0",
   "author": "Your Name <email@example.com>"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guru-ntt/exercise-publish-package.git"
+  },
 }
