@@ -14,11 +14,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v3
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     - name: Build the Docker image
+
       env:
           DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
       run: |
-        env
-        echo $DOCKER_TOKEN | docker login ghcr.io -u USERNAME --password-stdin
+        
         docker build -t ghcr.io/guru-ntt/demo:latest --file ./sample-packages/docker/Dockerfile .
         docker push ghcr.io/guru-ntt/demo:latest
