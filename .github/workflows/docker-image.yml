@@ -20,11 +20,9 @@ jobs:
         registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
+        
     - name: Build the Docker image
 
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        docker login -u guru-ntt --password-stdin $GITHUB_TOKEN
         docker build -t ghcr.io/guru-ntt/demo:latest --file ./sample-packages/docker/Dockerfile .
         docker push ghcr.io/guru-ntt/demo:latest
