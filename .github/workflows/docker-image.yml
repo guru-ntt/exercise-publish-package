@@ -24,5 +24,5 @@ jobs:
     - name: Build the Docker image
 
       run: |
-        docker build -t ghcr.io/guru-ntt/demo:latest --file ./sample-packages/docker/Dockerfile .
-        docker push ghcr.io/guru-ntt/demo:latest
+        docker build -t ghcr.io/guru-ntt/exercise-publish-package:latest --file ./sample-packages/docker/Dockerfile .
+        docker push ghcr.io/guru-ntt/exercise-publish-package:latest
