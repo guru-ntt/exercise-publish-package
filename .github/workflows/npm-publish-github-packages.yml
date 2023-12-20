@@ -22,6 +22,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+          registry-url: 'https://registry.npmjs.org'
+          always-auth: true
       - run: npm install
         working-directory: ./sample-packages/npm
       - run: npm publish
