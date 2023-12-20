@@ -25,7 +25,7 @@ jobs:
       - run: npm install
         working-directory: ./sample-packages/npm
       - run: npm publish
-        working-directory: ./sample-packages/npm/build
+        working-directory: ./sample-packages/npm
         env:
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
