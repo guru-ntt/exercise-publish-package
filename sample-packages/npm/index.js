@@ -1,1 +1,7 @@
-console.log("hello world");
+//index.js
+
+function helloNpm() {
+    return "hello from NPM"
+  }
+  
+  module.exports = helloNpm

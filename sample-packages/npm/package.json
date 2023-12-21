@@ -1,9 +1,11 @@
 {
-  "name": "my-awesome-package",
+  "name": "guru-publish-package-demo",
   "version": "1.0.0",
-  "author": "Your Name ",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/guru-ntt/exercise-publish-package.git"
-  }
+  "description": "test package ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gurunath sane",
+  "license": "ISC"
 }
