@@ -1,5 +1,5 @@
 {
-  "name": "guru-publish-package-demo",
+  "name": "exercise-publish-package",
   "version": "1.0.0",
   "description": "test package ",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "url": "https://github.com/guru-ntt/exercise-publish-package.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/guru-ntt/exercise-publish-package"
+    "registry": "https://npm.pkg.github.com/@guru-ntt"
   },
   "author": "gurunath sane",
   "license": "ISC"
