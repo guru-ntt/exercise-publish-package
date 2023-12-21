@@ -1,3 +1,18 @@
 {
-  "your": "json config here"
+  "name": "guru",
+  "version": "1.0.0",
+  "description": "test package ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guru-ntt/exercise-publish-package.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@guru-ntt"
+  },
+  "author": "gurunath sane",
+  "license": "ISC"
 }
