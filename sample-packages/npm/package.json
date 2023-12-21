@@ -11,7 +11,7 @@
     "url": "https://github.com/guru-ntt/exercise-publish-package.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com/guru-ntt/exercise-publish-package"
   },
   "author": "gurunath sane",
   "license": "ISC"
